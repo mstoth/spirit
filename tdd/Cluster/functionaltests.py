@@ -4,6 +4,7 @@
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import time
 import unittest
 
 class NewVisitorTest(unittest.TestCase):
@@ -34,9 +35,13 @@ class NewVisitorTest(unittest.TestCase):
 		# The link should take me to the start page
 		element.click()
 		windowHandles = self.browser.window_handles
-		self.browser.switch_to_window(windowHandles[1])
+		self.browser.switch_to.window(windowHandles[1])
 		self.assertIn("Bewildering Guides for a Deserted Wife",\
 			      self.browser.title)
+
+		# After 8 seconds, the page will refresh to "Logotherapy"
+		time.sleep(10)
+		self.assertIn("Logotherapy",self.browser.title)
 		
 
 

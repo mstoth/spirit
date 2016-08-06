@@ -8,3 +8,6 @@ def home_page(request):
 
 def start_page(request):
 	return render(request,'elizabeth/start.html')
+
+def throughleaves(request):
+	return render(request,'elizabeth/throughleaves.html')
