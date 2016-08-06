@@ -19,5 +19,6 @@ from spirit import views
 
 urlpatterns = [
     url(r'^$',views.home_page,name='home'),
+    url(r'^elizabeth/start.html$',views.start_page,name='start'),
     url(r'^admin/', include(admin.site.urls)),
 ]

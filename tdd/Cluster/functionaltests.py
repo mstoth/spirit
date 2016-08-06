@@ -26,11 +26,17 @@ class NewVisitorTest(unittest.TestCase):
 		header_text = self.browser.find_element_by_tag_name('h1').text
 		self.assertIn('Spirit',header_text)
 
+
 		# The heading should be a link
 		element = self.browser.find_element_by_link_text("Spirit")
 		
 
-
+		# The link should take me to the start page
+		element.click()
+		windowHandles = self.browser.window_handles
+		self.browser.switch_to_window(windowHandles[1])
+		self.assertIn("Bewildering Guides for a Deserted Wife",\
+			      self.browser.title)
 		
 
 
