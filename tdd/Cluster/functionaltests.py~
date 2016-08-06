@@ -20,7 +20,13 @@ class NewVisitorTest(unittest.TestCase):
 		self.browser.get('http://localhost:8000')
 
 		# I should see the title as "Spirit"
-		assert "Spirit" in self.browser.title
+		self.assertIn("Spirit",self.browser.title)
+
+		# The heading on the page should also say "Spirit"
+        header_text = self.browser.find_element_by_tag_name('h1').text
+		self.assertIn('Spirit',header_text)
+
+		
 
 
 if __name__=="__main__":
