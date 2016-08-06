@@ -26,6 +26,11 @@ class NewVisitorTest(unittest.TestCase):
 		header_text = self.browser.find_element_by_tag_name('h1').text
 		self.assertIn('Spirit',header_text)
 
+		# The heading should be a link
+		element = self.browser.find_element_by_link_text("Spirit")
+		
+
+
 		
 
 
