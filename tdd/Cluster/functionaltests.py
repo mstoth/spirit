@@ -52,8 +52,8 @@ class NewVisitorTest(unittest.TestCase):
 		self.assertIn("Logotherapy",self.browser.title)
 		
 		# The image should be through the leaves after that
-		e=self.browser.find_element_by_id('faraway')
-		selfassertIn('throughleaves.jpg',e.get_attribute('src'))
+		e=self.browser.find_element_by_id('throughleaves')
+		self.assertIn('throughleaves.jpg',e.get_attribute('src'))
 		
 
 

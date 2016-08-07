@@ -53,7 +53,7 @@ var clicksound=createsoundbite("sitephotos/Walking4.mp4")
 <body>
 	
 
-<img class="map" img id="throughleaves" src="/static/othroughleaves.jpg" width="600" height="450" usemap="#firstmap"onmouseover="mouseoversound.playclip()"/>
+<img class="map" img src="sitephotos/othroughleaves.jpg" width="600" height="450" usemap="#firstmap"onmouseover="mouseoversound.playclip()"/>
 <map name="firstmap">
 
  
