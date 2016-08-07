@@ -32,6 +32,10 @@ class NewVisitorTest(unittest.TestCase):
 		element = self.browser.find_element_by_link_text("Spirit")
 		
 
+		# There should be the far away image displayed
+		e=self.browser.find_element_by_id('portrait')
+		self.assertIn('portrait4close.png',e.get_attribute('src'))
+
 		# The link should take me to the start page
 		element.click()
 		windowHandles = self.browser.window_handles
@@ -42,6 +46,10 @@ class NewVisitorTest(unittest.TestCase):
 		# After 8 seconds, the page will refresh to "Logotherapy"
 		time.sleep(10)
 		self.assertIn("Logotherapy",self.browser.title)
+		
+		# The image should be through the leaves after that
+		e=self.browser.find_element_by_id('faraway')
+		selfassertIn('throughleaves.jpg',e.get_attribute('src'))
 		
 
 
