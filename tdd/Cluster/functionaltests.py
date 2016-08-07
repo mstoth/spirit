@@ -35,10 +35,14 @@ class NewVisitorTest(unittest.TestCase):
 		# The heading should be a link
 		element = self.browser.find_element_by_link_text("Spirit")
 		
-
 		# There should be the far away image displayed
 		e=self.browser.find_element_by_id('portrait')
 		self.assertIn('portrait4close.png',e.get_attribute('src'))
+
+		# I should see a link to the credits
+		e=self.browser.find_element_by_link_text("Credits")
+		
+
 
 		# The link should take me to the start page
 		element.click()

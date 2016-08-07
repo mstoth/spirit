@@ -27,7 +27,7 @@ p.small {
 <font color="#FFFFFF" size="1" face="Didot"><h1><a href="credits.html" target="_blank">Credits</a><br></h1></font>
 <font color="#FFFFFF" size="1" face="Didot"><h1><a href="references.html" target="_blank">References</a><br></h1></font>
 </p>
-<div align="center"><img class="map" img src="/static/portrait4close.png" width="338" height="450" usemap="#firstmap"/>
+<div align="center"><img class="map" img src="phantom/sitephotos/portrait4close.png" width="338" height="450" usemap="#firstmap"/>
   <map name="firstmap">
 
   </map>
