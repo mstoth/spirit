@@ -58,7 +58,12 @@ class NewVisitorTest(unittest.TestCase):
 		# The image should be through the leaves after that
 		e=self.browser.find_element_by_id('throughleaves')
 		self.assertIn('throughleaves.jpg',e.get_attribute('src'))
-		
+
+		# Selecting the barn2 area will bring up barn2.html
+		e=self.browser.find_element_by_id('barn2')
+		e.click()
+		e=self.browser.find_element_by_id("barn2")
+		self.assertIn('barn2',e.get_attribute('src'))
 
 
 if __name__=="__main__":
